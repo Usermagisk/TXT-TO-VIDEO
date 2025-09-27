@@ -54,11 +54,11 @@ async def web_server():
     web_app.add_routes(routes)
     return web_app
 async def start_bot():
-await bot.start()
-print("Bot is up and running")
+    await bot.start()
+    print("Bot is up and running")
 
 async def stop_bot():
-await bot.stop()
+    await bot.stop()
 
 async def main():
 if WEBHOOK:
