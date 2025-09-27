@@ -47,12 +47,12 @@ routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
-    return web.json_response("your_render_url")  ## change it with your host url
-async def web_server():
-web_app = web.Application(client_max_size=30000000)
-web_app.add_routes(routes)
-return web_app
+    return web.json_response("your_render_url")  # change it with your host url
 
+async def web_server():
+    web_app = web.Application(client_max_size=30000000)
+    web_app.add_routes(routes)
+    return web_app
 async def start_bot():
 await bot.start()
 print("Bot is up and running")
